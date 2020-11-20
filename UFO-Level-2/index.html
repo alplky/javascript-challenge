@@ -40,10 +40,22 @@
                   <div class="form-group">
                     <ul class="list-group" id="filters">
                       <li class="filter list-group-item">
-                        <label for="date">Enter a Date</label>
 
-                        <!-- select #datetime for handleClick() -->
-                        <input class="form-control" id="datetime" type="text" placeholder="1/11/2011">
+                        <!-- multiple filters -->
+                        <label for="date">Enter a Date</label>
+                        <input class="form-control" id="datetime" type="text" placeholder="1/1/2010">
+
+                        <label for="date">Enter a City</label>
+                        <input class="form-control" id="city" type="text" placeholder="fresno">
+
+                        <label for="date">Enter a State</label>
+                        <input class="form-control" id="state" type="text" placeholder="ca">
+
+                        <label for="date">Enter a Country</label>
+                        <input class="form-control" id="country" type="text" placeholder="us">
+
+                        <label for="date">Enter a UFO shape</label>
+                        <input class="form-control" id="shape" type="text" placeholder="triange">
 
                       </li>
                     </ul>
@@ -74,6 +86,9 @@
                   <th class="table-head">Comments</th>
                 </tr>
               </thead>
+              
+              <!-- tabe body -->
+              <tbody></tbody>
 
             </table>
           </div>
