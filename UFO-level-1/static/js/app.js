@@ -1,9 +1,11 @@
+// function to show data 
 function tableData(data) {
     
     let table = d3.select("#ufo-table")
 
     table.selectAll("tr").remove()
     
+    // set up header row
     let headerRow = table.append("tr")
 
     headerRow.append("th").text("Datetime")
@@ -14,6 +16,7 @@ function tableData(data) {
     headerRow.append("th").text("Duration (min)")
     headerRow.append("th").text("Comments")
 
+    // set up table body
     let tableBody = table.append("tbody")
 
     data.forEach((d) => {
@@ -28,3 +31,14 @@ function tableData(data) {
     })
 
 }
+
+// create function to filter by date input
+function handleClick() {
+    let dateInput = d3.select("#datetime").property("value")
+    let filteredDate = data.filter((d) => d.datetime === dateInput)
+
+    tableData(filteredDate)
+}
+
+// pass id for button and function to click
+d3.select("#filter-btn").on("click", handleClick)
