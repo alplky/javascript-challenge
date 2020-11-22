@@ -33,22 +33,34 @@ function tableData(data) {
 }
 
 // create function to filter by date input
-function handleClick(input) {
+function handleClick() {
     let dateInput = d3.select("#datetime").property("value")
     let cityInput = d3.select("#city").property("value")
     let stateInput = d3.select("#state").property("value")
     let countryInput = d3.select("#country").property("value")
     let shapeInput = d3.select("#shape").property("value")
 
-    let filteredData = data.filter((d) => {
-       if input (d.date === dateInput && d.city === cityInput && d.state === stateInput && d.country === countryInput && d.shape === shapeInput &&) {
-            return input
-        }
-    }) 
+    let filteredDate = data.filter((d) => d.datetime === dateInput)
+    let filteredCity = data.filter((d) => d.city === cityInput)
+    let filteredState = data.filter((d) => d.state === stateInput)
+    let filteredCountry = data.filter((d) => d.country === countryInput)
+    let filteredShape = data.filter((d) => d.shape === shapeInput)
 
-    tableData(filteredData)
+    if dateInput {
+        tableData(filteredDate)
+    } else if cityInput {
+        tableData(filteredCity)
+    } else if stateInput {
+        tableData(filteredState)
+    } else if countryInput {
+        tableData(filteredCountry)
+    } else if shapeInput {
+        tableData(filteredShape)
+    }
+
+
+
 }
 
 // pass id for button and function to click
 d3.select("#filter-btn").on("click", handleClick)
-
