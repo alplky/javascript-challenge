@@ -32,7 +32,7 @@ function tableData(data) {
 
 }
 
-// create function to filter by date input
+// create function to filter by various inputs
 function handleClick() {
     let dateInput = d3.select("#datetime").property("value")
     let cityInput = d3.select("#city").property("value")
@@ -40,27 +40,11 @@ function handleClick() {
     let countryInput = d3.select("#country").property("value")
     let shapeInput = d3.select("#shape").property("value")
 
-    // let filteredDate = data.filter((d) => d.datetime === dateInput)
-    // let filteredCity = data.filter((d) => d.city === cityInput)
-    // let filteredState = data.filter((d) => d.state === stateInput)
-    // let filteredCountry = data.filter((d) => d.country === countryInput)
-    // let filteredShape = data.filter((d) => d.shape === shapeInput)
-
     let filteredData = data.filter((d) => d.datetime === dateInput || 
-                                            d.city === cityInput)
-
-
-    // if dateInput {
-    //     tableData(filteredDate)
-    // } else if cityInput {
-    //     tableData(filteredCity)
-    // } else if stateInput {
-    //     tableData(filteredState)
-    // } else if countryInput {
-    //     tableData(filteredCountry)
-    // } else if shapeInput {
-    //     tableData(filteredShape)
-    // }
+                                            d.city === cityInput ||
+                                            d.state === stateInput ||
+                                            d.country === countryInput ||
+                                            d.shape === shapeInput)
 
     tableData(filteredData)
 
