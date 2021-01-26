@@ -12,7 +12,7 @@ Provided with a dataset of UFO sightings, create a dynamic table that will filte
 ## Objectives
 - UFO Level 1: Automatic Table and Date Search
 
-    Use a date form in the HTML document and write JavaScript code that will listen for events and search through the date/time column to tind rows that match user input. 
+    Use a date form in the HTML document and write JavaScript code that will listen for events and search through the date/time column to tind rows that match the user input. 
 - UFO Level 2: Multiple Search Categories
     Using multiple input tags, write JavaScript code so the user can set multiple filters and search for UFO sightings based on the following table columns: date, city, state, country, shape (of UFO).
 
@@ -90,7 +90,7 @@ Instead of having the user enter inputs into the same field, multiple fields wer
 </li>
 ```
 
-The table set up for Level 2 was exactly the same as Level on. The only difference was how the table was filtered based on user input. Here a variable was created for each avaiable input field. Then the data was filtered based on a user input using || (or) so the user can choose any of the fields and receive data back. 
+The table set up for Level 2 was exactly the same as Level on. The only difference was how the table was filtered based on user input. Here a variable was created for each available input field. Then the data were filtered based on a user input using || (or) so the user can choose any of the fields and receive data back. 
 
 ```javascript
 // create function to filter by various inputs
